@@ -156,7 +156,8 @@ img {
   overflow: auto;
 }
 
-.contenitore_messaggio {
+.contenitore_messaggio_utente,
+.contenitore_messaggio_interlocutore  {
   overflow: auto;
 }
 
