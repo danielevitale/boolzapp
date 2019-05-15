@@ -6,6 +6,7 @@ $(".messages").mouseleave(function() {
   $(this).css("background", "white");
 });
 
+
 // Al click sul tasto di invio messaggio, il messaggio compare sullo schermo
 $(".fas.fa-play").click(function() {
   // Controllo che l'utente abbia digitato qualcosa prima di cliccare su invio
@@ -35,4 +36,21 @@ $(".fas.fa-play").click(function() {
       $(".box-messages").append(template_interlocutore);
     }, 1000);
   } // Chiusura if
+})
+
+
+// Ricerca delle conversazioni con gli utenti
+$("input.ricerca_nome").keyup(function(event) {
+  // Nascondo tutte le conversazioni
+  $(".messages").hide();
+  // Rendo tutto minuscolo
+  var carattere_inserito = $("input.ricerca_nome").val().toLowerCase();
+  // Per ogni nome verifico se il carattere digitato dall'utente è incluso in esso. In caso positivo mostro
+  // la conversazione
+  $(".messages h3").each(function() {
+    var nome = $(this).text().toLowerCase();
+    if (nome.includes(carattere_inserito)) {
+      $(this).parent(".testo").parent(".testo_messaggi").parent(".messages").show();
+    }
+  })
 })

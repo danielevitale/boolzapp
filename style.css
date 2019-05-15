@@ -56,9 +56,12 @@ img {
   display: flex;
   height: 90%;
   width: 90%;
-  padding-left: 30px;
   border: 0;
   border-radius: 10px;
+}
+
+i.fas.fa-search {
+  margin: 0 10px;
 }
 
 .contenitore_messaggi {
