@@ -57,7 +57,7 @@ img {
 }
 
 .search i {
-  color: #4f4f4f;
+  color: grey;
   margin-right: 10px;
 }
 
@@ -80,6 +80,7 @@ img {
   display: flex;
   align-items: center;
   border-top: 1px solid #eeeeee;
+  cursor: pointer;
 }
 
 .testo_messaggi, .nome_contatto {
@@ -139,6 +140,10 @@ img {
   border-radius: 10px;
 }
 
+.invio_mess .fa-paper-plane {
+  cursor: pointer;
+}
+
 .fa-paper-plane,
 .fa-microphone {
   font-size: 30px;
@@ -184,6 +189,21 @@ img {
   color: grey;
 }
 
+.messaggio_utente i,
+.messaggio_interlocutore i {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: grey;
+  display: none;
+  cursor: pointer;
+}
+
+.messaggio_utente:hover i,
+.messaggio_interlocutore:hover i {
+  display: block;
+}
+
 .contenitore_messaggio_utente::after,
 .contenitore_messaggio_interlocutore::after  {
   clear: both;
@@ -191,6 +211,41 @@ img {
   content: '';
 }
 
+.panel {
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  text-align: center;
+  display: none;
+  z-index: 1;
+}
+
+.panel h5 {
+  cursor: pointer;
+  color: grey;
+  line-height: 25px;
+}
+
 .nascosto {
   display: none;
+}
+
+.box-messages {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.bggrey {
+  background-color: #d8d8d8;
+}
+
+.bglightgrey {
+  background-color: #f4f4f4;
 }
